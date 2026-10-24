@@ -20,7 +20,7 @@ el.innerHTML='<div class="s2" dir="rtl"><h1>'+CFG.title+'</h1><p>'+CFG.intro+'</
 '<h2>3. دمج الأصوات</h2><p>اختر كلمة، المس حروفها بالترتيب، ثم اسمع الكلمة كاملة.</p><div class="box"><div class="row" id="s2bp"></div><p></p><div class="row" id="s2bl" dir="ltr"></div></div>'+
 '<h2>4. اقرأ الجمل</h2><p>المس الجملة واسمعها، ثم اقرأها بنفسك، واستمع إليها مرة ثانية.</p><div class="box" id="s2r"></div>'+
 '<h2>5. رتّب الجملة</h2><p>المس الكلمات بالترتيب الصحيح. المحاولة لا تُحسب.</p><div class="box" id="s2o"></div>'+
-'<h2>6. استمع واكتب</h2><p>اسمع الكلمة أو الجملة ثم اكتبها.</p><div class="box" id="s2w"></div></div><div id="s2note" dir="rtl"></div>';
+'<h2>6. استمع واكتب</h2><p>اسمع الكلمة أو الجملة ثم اكتبها.</p><div class="box" id="s2w"></div><div dir="ltr" style="text-align:center;margin-top:26px;font-size:13px;opacity:.65;line-height:1.8">Prepared by Mohamed Mostafa Al Shorbagy<br>Regional Supervisor</div></div><div id="s2note" dir="rtl"></div>';
 noteEl=document.getElementById("s2note");
 var $=function(i){return document.getElementById(i)};
 P2.forEach(function(p){var b=document.createElement("button");b.className="t";var v=VER.indexOf(p)>=0;b.innerHTML=L(p)+"<small>"+(v?"الصوت":"كلمة")+" "+L(ex[p])+"</small>";b.onclick=function(){if(v)play("audio-ph-"+p+".m4a");else play(wfile(ex[p]))};$("s2s").appendChild(b)});
