@@ -1,6 +1,6 @@
 (function(){
 var P1=["a","h","i","k","m","n","o","p","r","s","t"],P2=["f","g","b","d","l","u","e"];
-var ex={f:"fan",g:"goat",b:"bag",d:"dad",l:"leg",u:"sun",e:"leg"};
+var ex={f:"fan",g:"get",b:"bag",d:"dad",l:"leg",u:"sun",e:"leg"};
 var dec=[["bag","حقيبة"],["bat","مضرب"],["big","كبير"],["bin","سلة"],["dad","أبي"],["dig","يحفر"],["dot","نقطة"],["leg","رِجل"],["lid","غطاء"],["log","جذع"],["red","أحمر"],["hen","دجاجة"],["run","يركض"],["sun","شمس"]];
 var sight=[["I","أنا"],["you","أنت"],["he","هو"],["she","هي"],["we","نحن"],["they","هم"],["is","يكون"],["are","يكونون"],["my","لي"],["see","يرى"],["this","هذا"],["and","و"],["get","يحصل"]];
 var sents=["I see a big bin.","You get the red bag.","Dad sits on the log.","He runs in the sun.","She runs.","The hen is red.","This is my bag.","They see the sun."];
@@ -42,6 +42,6 @@ sh.forEach(function(x){var t=document.createElement("button");t.className="tok";
 order();
 var wi=0;function wr(){var items=sents.concat(dec.map(function(x){return x[0]}));var it=items[wi%items.length];var isS=it.indexOf(" ")>0;var box=$("s2w");box.innerHTML='<button class="go" id="s2p">🔊 اسمع</button><p></p><input id="s2i" autocomplete="off" autocapitalize="off" spellcheck="false"><p></p><button class="go" id="s2c">تحقق</button> <span id="s2r2"></span>';
 $("s2p").onclick=function(){play(isS?sid(it):wfile(it))};
-$("s2c").onclick=function(){var v=$("s2i").value.trim().replace(/\.$/,"").toLowerCase().replace(/\s+/g," ");var t=it.replace(/\.$/,"").toLowerCase();var r=$("s2r2");if(v===t){r.innerHTML='<span class="ok">ممتاز!</span> <button class="go" id="s2x">التالي</button>';save("write");$("s2x").onclick=function(){wi++;wr()}}else{r.innerHTML='<span class="bd">اسمع مرة أخرى وجرّب.</span>'}}}
+$("s2c").onclick=function(){var v=$("s2i").value.replace(/[.?,]/g,"").trim().toLowerCase().replace(/\s+/g," ");var t=it.replace(/[.?,]/g,"").toLowerCase();var r=$("s2r2");if(v===t){r.innerHTML='<span class="ok">ممتاز!</span> <button class="go" id="s2x">التالي</button>';save("write");$("s2x").onclick=function(){wi++;wr()}}else{r.innerHTML='<span class="bd">اسمع مرة أخرى وجرّب.</span>'}}}
 wr()}};
 })();

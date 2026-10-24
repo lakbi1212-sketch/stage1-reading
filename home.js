@@ -2,8 +2,8 @@
 var stages=[
 {n:1,name:"المرحلة الأولى",icon:"🔤",color:"#b35c10",bg:"#fdeed9",desc:"أصوات وكلمات وجمل: تسمع، تدمج، تقرأ، ثم تبني وتكتب.",ready:true},
 {n:2,name:"المرحلة الثانية",icon:"📖",color:"#166b54",bg:"#e3f2ec",desc:"أصوات جديدة وكلمات وجمل أكثر.",ready:true},
-{n:3,name:"المرحلة الثالثة",icon:"✏️",color:"#1a62a8",bg:"#e4f0fb",desc:"أصوات مركّبة جديدة وكلمات أطول وأسئلة قصيرة.",ready:false},
-{n:4,name:"المرحلة الرابعة",icon:"🌟",color:"#6a3fa0",bg:"#f0eafa",desc:"قراءة فقرة قصيرة وكتابة جمل بنفسك.",ready:false}];
+{n:3,name:"المرحلة الثالثة",icon:"✏️",color:"#1a62a8",bg:"#e4f0fb",desc:"",ready:true},
+{n:4,name:"المرحلة الرابعة",icon:"🌟",color:"#6a3fa0",bg:"#f0eafa",desc:"",ready:true}];
 var root=document.getElementById("root");
 var s=document.createElement("style");
 s.textContent=".hm{max-width:720px;margin:0 auto;padding:24px 16px 40px;color:#242022;font-family:'Noto Kufi Arabic',sans-serif}.hm h1{font-size:24px;margin:8px 0 6px}.hm p.sub{margin:0 0 20px;font-size:15px;opacity:.8}.hm-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.hm-card{border:2px solid;border-radius:20px;padding:22px 12px;text-align:center;cursor:pointer;font:inherit;display:flex;flex-direction:column;align-items:center;gap:8px}.hm-card:active{transform:scale(.98)}.hm-ic{font-size:52px;line-height:1}.hm-nm{font-size:18px;font-weight:800}.hm-st{font-size:12px;opacity:.85}.hm-det{border:2px solid;border-radius:20px;padding:24px 18px;text-align:center}.hm-det .hm-ic{font-size:64px}.hm-back{position:fixed;top:10px;left:10px;z-index:50;background:#fff;border:1px solid #eae9ea;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer;box-shadow:0 1px 4px #0002}.hm-btn{margin-top:12px;padding:10px 20px;border-radius:12px;border:0;color:#fff;font:inherit;font-size:15px;cursor:pointer}@media(max-width:380px){.hm-grid{gap:10px}.hm-nm{font-size:16px}}";
@@ -14,7 +14,7 @@ function esc(t){return t}
 function render(){
 var h=location.hash.replace("#","");var m=/^stage(\d)$/.exec(h);var n=m?+m[1]:0;
 var st=stages[n-1];
-if(n===2){back.style.display='';root.style.display='none';home.style.display='';window.Stage2.render(home);window.scrollTo(0,0);return}
+if(n>=2&&n<=4&&window['Stage'+n]){back.style.display='';root.style.display='none';home.style.display='';window['Stage'+n].render(home);window.scrollTo(0,0);return}
 if(n===1){home.style.display="none";root.style.display="";back.style.display="";window.scrollTo(0,0);return}
 root.style.display="none";home.style.display="";
 if(!st){back.style.display="none";
