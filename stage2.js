@@ -24,7 +24,7 @@ el.innerHTML='<div class="s2" dir="rtl"><h1>المرحلة الثانية: أص�
 '<h2>1. أصوات جديدة</h2><p>المس الحرف لتسمع كلمة مثال تبدأ به أو تحتوي عليه. حرف u يُسمع صوته مباشرة.</p><div class="box"><div class="row" id="s2s"></div></div>'+
 '<h2>2. الكلمات</h2><p>المس أي كلمة لتسمع نطقها وترى معناها.</p><div class="box"><div class="row" id="s2d"></div><p></p><div class="row" id="s2g"></div></div>'+
 '<h2>3. دمج الأصوات</h2><p>اختر كلمة، المس حروفها بالترتيب، ثم اسمع الكلمة كاملة.</p><div class="box"><div class="row" id="s2bp"></div><p></p><div class="row" id="s2bl" dir="ltr"></div></div>'+
-'<h2>4. اقرأ الجمل</h2><p>١. اسمع الجملة (زر الصوت). ٢. اقرأها بنفسك. ٣. اسمعها مرة أخرى.</p><div class="box" id="s2r"></div>'+
+'<h2>4. اقرأ الجمل</h2><p>المس الجملة واسمعها، ثم اقرأها بنفسك، واستمع إليها مرة ثانية.</p><div class="box" id="s2r"></div>'+
 '<h2>5. رتّب الجملة</h2><p>المس الكلمات بالترتيب الصحيح. المحاولة لا تُحسب.</p><div class="box" id="s2o"></div>'+
 '<h2>6. استمع واكتب</h2><p>اسمع الكلمة أو الجملة ثم اكتبها.</p><div class="box" id="s2w"></div></div><div id="s2note" dir="rtl"></div>';
 noteEl=document.getElementById("s2note");
