@@ -6,7 +6,7 @@ function sid(s){return FS[s]||("audio-sent-"+s.toLowerCase().replace(/[.?,]/g,""
 function wfile(w){var k=w.toLowerCase();return FW[k]||("audio-word-"+k+".mp3")}
 var VER=P1.concat(["u"]);var cur=null;
 function play(f,cb){try{if(cur){cur.pause()}}catch(e){}
-var a=new Audio("./"+f);cur=a;a.onended=function(){cb&&cb(true)};a.onerror=function(){note("الصوت قيد التسجيل.");cb&&cb(false)};var p=a.play();if(p&&p.catch)p.catch(function(){});return a}
+var a=new Audio((window.AUDIO&&window.AUDIO[f])||("./"+f));cur=a;a.onended=function(){cb&&cb(true)};a.onerror=function(){note("الصوت قيد التسجيل.");cb&&cb(false)};var p=a.play();if(p&&p.catch)p.catch(function(){});return a}
 var noteEl;function note(t){if(noteEl){noteEl.textContent=t;noteEl.style.opacity=1;clearTimeout(note.t);note.t=setTimeout(function(){noteEl.style.opacity=0},2500)}}
 function L(t){return '<span dir="ltr" class="s2l">'+t+'</span>'}
 function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
