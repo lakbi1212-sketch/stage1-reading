@@ -40,3 +40,7 @@ section.group:has(.builder) .para{font-size:19px;line-height:1.9;font-weight:600
 .builder-actions{gap:12px}
 
 .sound-group{margin:10px 0 4px}.sound-group-label{font-weight:800;font-size:15px;color:#1B3A6B;margin:0 2px 6px}
+
+.sound-tile{border:1px solid #d9c98f;border-bottom:4px solid #d4b45e;background:linear-gradient(180deg,#fffbe8,#fdf3cf);box-shadow:0 3px 6px rgba(92,74,18,.18),inset 0 1px 0 #ffffff;transition:transform .08s ease,box-shadow .08s ease,border-bottom-width .08s ease;-webkit-tap-highlight-color:transparent}
+.sound-tile:hover{background:linear-gradient(180deg,#fff6d6,#fbeec4)}
+.sound-tile:active{transform:translateY(3px);border-bottom-width:1px;box-shadow:0 1px 2px rgba(92,74,18,.2),inset 0 1px 0 #ffffff}
