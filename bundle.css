@@ -38,3 +38,5 @@ section.group:has(.builder) .para{font-size:19px;line-height:1.9;font-weight:600
 .picker-s3 .mini-chip{color:#5b2a99;border-color:#8b46d9}
 .picker-s3 .mini-chip.is-on{background:#8b46d9;color:#fff}
 .builder-actions{gap:12px}
+
+.sound-group{margin:10px 0 4px}.sound-group-label{font-weight:800;font-size:15px;color:#1B3A6B;margin:0 2px 6px}
